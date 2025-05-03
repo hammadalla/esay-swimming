@@ -4,7 +4,7 @@ import About from '../Component/About/About'
 import Programes from '../Component/Programes/Programes'
 import Team from '../Component/Team/Team'
 import Gallery from '../Component/Gallery/Gallery'
-import Testimonial from '../Component/testimonial/Testimonial'
+import Testimonial from '../Component/Testimonial/Testimonial'
 import Map from '../Component/Map/Map'
 
 
