@@ -1,0 +1,11 @@
+.logo-footer {
+    width: 100px;
+}
+
+.footer {
+    background: #0F168A ;
+    background-image: url(../../assets/images/hero_bg_2.png);
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+    /* background-position: top right; */
+}

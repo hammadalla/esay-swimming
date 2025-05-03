@@ -1,0 +1,199 @@
+.Intro-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+}
+
+.carousel-item.active .Intro-image {
+    -webkit-animation: zoom 1.5s alternate forwards;
+    animation: zoom 1.5s alternate forwards;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100vh;
+    clip-path: polygon(30% 0%, 100% 0, 100% 30%, 100% 90%, 87% 100%, 13% 100%, 0 90%, 0 0);
+}
+
+.Intro-image-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000054;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Intro-image-layer-pragraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Intro-image-layer-pragraph img {
+    width: 150px;
+}
+
+.Intro-image-layer-pragraph h1 {
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 2px 2px 0 #000000, 4px 4px 0 #555555;
+    -webkit-animation: fadeUp 2s ease-in-out forwards;
+    animation: fadeUp 2s ease-in-out forwards;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+.Intro-image-layer-title p {
+    color: #fff;
+    font-size: 18px;
+    text-wrap: wrap;
+    text-shadow: 2px 2px 0 #000000, 4px 4px 0 #555555;
+    margin: 0px 0;
+    -webkit-animation: fadeUp 2s ease-in-out forwards;
+    animation: fadeUp 2s ease-in-out forwards;
+    text-align: center;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+
+.button {
+    text-decoration: none;
+    display: inline-flex;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10rem;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    padding-left: 20px;
+    -webkit-transition: color 0.6s;
+    -moz-transition: color 0.6s;
+    -ms-transition: color 0.6s;
+    -o-transition: color 0.6s;
+    transition: color 0.6s;
+}
+
+.button:hover {
+    color: #0F168A;
+}
+
+.button__icon-wrapper {
+    background: #0F168A;
+    color: #fff;
+    height: 23px;
+    width: 23px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+/* animation */
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+        -moz-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+        -o-transform: translateY(30px);
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+/* Media Query  */
+
+@media(max-width:992px) {
+    .carousel-item {
+        height: 40vh;
+    }
+
+    .Intro-image-layer .Intro-image-layer-pragraph img {
+        width: 100px;
+    }
+
+    .Intro-image-layer .Intro-image-layer-pragraph h1 {
+        font-size: 15px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .Intro-image-layer .Intro-image-layer-title p {
+        font-size: 10px;
+        text-align: center;
+        width: 80%;
+        margin: auto;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .button {
+        text-decoration: none;
+        display: inline-flex;
+        border: none;
+        cursor: pointer;
+        align-items: center;
+        gap: 0.75rem;
+        background-color: #fff;
+        color: #000;
+        border-radius: 10rem;
+        font-weight: 600;
+        padding: 0.4rem 1.2rem;
+    }
+}

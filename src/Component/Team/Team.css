@@ -1,0 +1,37 @@
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: #007bff;
+    /* Bootstrap primary color */
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 16px;
+}
+
+.swiper-button-next {
+    right: 0px;
+}
+
+.swiper-button-prev {
+    left: 0px;
+}
+
+.swiper {
+    padding: 0 25px;
+}
+
+.Team-bg {
+    background-image: url(../../assets/images/hero_bg_2.png);
+    background-size: cover;
+}
