@@ -19,7 +19,7 @@ export default function About() {
     const images = [img1, img2, img3];
     return (
         <>
-            <section className="aquatic-section">
+            <section className="aquatic-section overflow-hidden">
                 <div className="grid-container">
                     <div className="image-grid" data-aos="fade-right">
                         {images.map((img, index) => (

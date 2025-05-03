@@ -54,7 +54,7 @@ export default function Programes() {
     return (
         <>
 
-            <section className="swiper-bg py-5">
+            <section className="swiper-bg overflow-hidden py-5">
                 <div className="container text-center">
                     <div className="d-flex align-items-center justify-content-center">
                         <img src={TitleShape} className='TitleShape' alt="" />

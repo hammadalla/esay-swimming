@@ -31,7 +31,7 @@ export default function Gallery() {
 
 
 
-        <section className="gallery-section  py-5">
+        <section className="gallery-section overflow-hidden py-5">
             <div className="container">
                 <div className="d-flex align-items-center justify-content-center">
                     <img src={TitleShape} className='TitleShape' alt="" />
