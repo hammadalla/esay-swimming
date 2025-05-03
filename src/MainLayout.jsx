@@ -1,8 +1,8 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import Navbar from './src/Component/Navbar/Navbar'
-import WhatsAppButton from './src/Component/whatsappButton/WhatsappButton'
-import Footer from './src/Component/Footer/Footer'
+import Navbar from './Component/Navbar/Navbar'
+import WhatsAppButton from './Component/whatsappButton/WhatsappButton'
+import Footer from './Component/Footer/Footer'
 
 export default function MainLayout() {
     return (
