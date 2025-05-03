@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import MainLayout from '../MainLayout'
+import MainLayout from '../src/MainLayout'
 import Home from './pages/Home'
 import About from './pages/About'
 import OurStaff from './pages/OurStaff'
@@ -15,8 +15,8 @@ export default function App() {
     {
       path: "", element: <MainLayout />, children: [
         { path: "", element: <Home /> },
-        { path: "about us", element: <About /> },
-        { path: "our staff", element: <OurStaff /> },
+        { path: "aboutus", element: <About /> },
+        { path: "ourstaff", element: <OurStaff /> },
         { path: "programes", element: <Programes /> },
         { path: "gallery", element: <Gallery /> },
         { path: "contact", element: <Contact /> },
