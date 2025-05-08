@@ -8,7 +8,7 @@ import OurStaff from './pages/OurStaff'
 import Programes from './pages/Programes'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
-import Programdetails from './pages/programdetails'
+import Programdetails from './pages/Programdetails'
 
 export default function App() {
 
