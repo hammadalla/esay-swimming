@@ -68,7 +68,7 @@ export default function Programes() {
                         slidesPerView={3}
                         // navigation
                         pagination={{ clickable: true }}
-                        autoplay={{ delay: 3000 }}
+                        autoplay={{ delay: 10000 }}
                         breakpoints={{
                             0: { slidesPerView: 1 },
                             768: { slidesPerView: 2 },
@@ -104,9 +104,9 @@ export default function Programes() {
                         ))}
 
                     </Swiper>
-                        <div class="service-banner">
-                            <span class="service-text">High Quality Pool For You</span>
-                            <Link to={"/"} class="service-button">GET ALL Programs</Link>
+                        <div className="service-banner">
+                            <span className="service-text">High Quality Pool For You</span>
+                            <Link to={"/"} className="service-button">GET ALL Programs</Link>
                         </div>
                 </div>
             </section>

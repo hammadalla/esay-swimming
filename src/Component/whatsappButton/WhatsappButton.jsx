@@ -17,7 +17,7 @@ export default function WhatsAppButton() {
     return (
         showButton && (
             <Link
-                to={"https://wa.me/201234567890"} // ← ضع رقم واتسابك هنا
+                to={"https://wa.me/971585971721"} // ← ضع رقم واتسابك هنا
                 className="whatsapp-button"
                 target="_blank"
                 rel="noopener noreferrer"

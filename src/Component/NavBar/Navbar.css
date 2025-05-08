@@ -1,5 +1,10 @@
 .logo {
     width: 70px;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo-small {
+    width: 50px;
 }
 
 .navbar {

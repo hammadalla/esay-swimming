@@ -5,27 +5,32 @@ import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
     const [scrolled, setscrolled] = useState(false)
+    const [logoSize, setLogoSize] = useState('normal')
 
     useEffect(() => {
         const handleScroll = () => {
             const offset = window.scrollY
-
             setscrolled(offset > 50)
+            setLogoSize(offset > 50 ? 'small' : 'normal')
         }
 
         window.addEventListener('scroll', handleScroll)
 
         return () => {
-            window.addEventListener('scroll', handleScroll)
+            window.removeEventListener('scroll', handleScroll)
         }
-
     }, [])
+
     return (
         <div>
-            <nav class={`navbar navbar-expand-lg shadow-sm p-0 fixed-top ${scrolled ? 'navbarStyle' : ''}`}>
+            <nav className={`navbar navbar-expand-lg shadow-sm p-0 fixed-top ${scrolled ? 'navbarStyle' : ''}`}>
                 <div className="container">
                     <NavLink to="/" className="navbar-brand">
-                        <img src={logo} alt="Logo" className="logo" />
+                        <img 
+                            src={logo} 
+                            alt="Logo" 
+                            className={`logo ${logoSize === 'small' ? 'logo-small' : ''}`} 
+                        />
                     </NavLink>
 
                     <button
@@ -43,29 +48,16 @@ export default function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/home">Home</NavLink>
+                                <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="">Home</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/about">About Us</NavLink>
                             </li>
-                            <li className="nav-item dropdown">
-                                <NavLink
-                                    className="nav-link"
-                                    to="/programs"
-                                    role="button"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                >
-                                    Programs
-                                </NavLink>
-                                <ul className="dropdown-menu">
-                                    <li><NavLink className="dropdown-item" to="/programs/action">Action</NavLink></li>
-                                    <li><NavLink className="dropdown-item" to="/programs/another">Another action</NavLink></li>
-                                    <li><NavLink className="dropdown-item" to="/programs/other">Something else here</NavLink></li>
-                                </ul>
+                            <li className="nav-item">
+                                <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/programes">Programs</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/staff">Our Staff</NavLink>
+                                <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/ourstaff">Our Staff</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/gallery">Gallery</NavLink>

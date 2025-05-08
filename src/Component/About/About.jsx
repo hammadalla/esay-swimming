@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 import '../About/About.css'
 import img1 from '../../assets/images/home-slid1.jpg'
 import img2 from '../../assets/images/home-slid3.jpg'
@@ -8,6 +10,7 @@ import { Link } from 'react-router-dom'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 export default function About() {
+    const { ref, inView } = useInView({ triggerOnce: true });
     useEffect(() => {
         AOS.init({
             duration: 1500,
@@ -38,35 +41,33 @@ export default function About() {
                                 Why Choose Us
                             </h4>
                         </div>
-                        <h2 className="title">Unparalleled Excellence in Aquatic Education</h2>
+                        <h2 className="title">Excellence in Every Stroke – Your Trusted Swim Academy</h2>
                         <p className="description">
-                            Opening in spring and closing in fall are ideal. However, it depends on local
-                            climate conditions; a professional service can guide you based on your location,
-                            regular chlorination, proper water cleaning.
+                        With over 15 years of experience, we provide world-class swimming education for all ages. Our certified instructors and modern facilities ensure a safe, progressive, and enjoyable learning journey. Whether you're a beginner or an aspiring athlete, we tailor your training for lasting impact.
                         </p>
                         <div className="feature-list">
                             <span>
-                                <i class="fa-solid fa-check"></i>
-                                Modern methods
+                                <i className="fa-solid fa-check"></i>
+                                Modern teaching methods
                             </span>
                             <span>
-                                <i class="fa-solid fa-check"></i>
-                                Personal development
+                                <i className="fa-solid fa-check"></i>
+                                15+ years of excellence
                             </span>
-                            <span><i class="fa-solid fa-check"></i>
-                                15 years on the market
-                            </span>
-                            <span>
-                                <i class="fa-solid fa-check"></i>
-                                Modern equipment
+                            <span><i className="fa-solid fa-check"></i>
+                            Easy payment options
                             </span>
                             <span>
-                                <i class="fa-solid fa-check"></i>
-                                Payment in installments
+                                <i className="fa-solid fa-check"></i>
+                                Focus on personal growth
                             </span>
                             <span>
-                                <i class="fa-solid fa-check"></i>
-                                Introductory lesson
+                                <i className="fa-solid fa-check"></i>
+                                Latest swimming equipment
+                            </span>
+                            <span>
+                                <i className="fa-solid fa-check"></i>
+                                Free introductory session
                             </span>
                         </div>
 
@@ -80,18 +81,25 @@ export default function About() {
                                 Read More
                             </Link>
                         </div>
-                        <div className="stats-grid" data-aos="fade-up">
+                        <div className="stats-grid" data-aos="fade-up" ref={ref}>
                             <div className="stat-box">
-                                <h3>2k+</h3>
+                                <h3>
+                                {inView && <CountUp end={200} duration={2} />}K+
+                                    </h3>
                                 <p>Happy Clients</p>
                             </div>
                             <div className="stat-box">
-                                <h3>2.3k+</h3>
+                                <h3>
+                                {inView && <CountUp end={100} duration={2} />}
+                                    k+
+                                    </h3>
                                 <p>Total Students</p>
                             </div>
                             <div className="stat-box">
-                                <h3>200+</h3>
-                                <p>Happy Clients</p>
+                                <h3>
+                                {inView && <CountUp end={250} duration={2} />}+
+                                </h3>
+                                <p>Team Members</p>
                             </div>
                         </div>
                     </div>

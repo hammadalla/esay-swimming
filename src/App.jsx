@@ -8,6 +8,7 @@ import OurStaff from './pages/OurStaff'
 import Programes from './pages/Programes'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
+import Programdetails from './pages/programdetails'
 
 export default function App() {
 
@@ -15,9 +16,10 @@ export default function App() {
     {
       path: "", element: <MainLayout />, children: [
         { path: "", element: <Home /> },
-        { path: "aboutus", element: <About /> },
+        { path: "about", element: <About /> },
         { path: "ourstaff", element: <OurStaff /> },
         { path: "programes", element: <Programes /> },
+        { path: "Programdetails", element: <Programdetails /> },
         { path: "gallery", element: <Gallery /> },
         { path: "contact", element: <Contact /> },
       ]

@@ -41,17 +41,23 @@ export default function Footer() {
                         {/* Contact Info */}
                         <div className="col-md-4 col-lg-4 col-xl-4 ms-auto mt-3">
                             <h5 className="text-uppercase fw-bold mb-4">Contact Us</h5>
-                            <p><i className="fas fa-map-marker-alt me-2"></i> 445 S E St unit 12, Santa Rosa CA 95404, United States</p>
-                            <p><i className="fas fa-phone me-2"></i> +(163)-2654–3654</p>
-                            <p><i className="fas fa-phone me-2"></i> +(163)-2654–3564</p>
-                            <p><i className="fas fa-envelope me-2"></i> help24/7@Poolax.com</p>
+                            <Link to={" https://maps.app.goo.gl/yFC2tBBsxQtP5Aow9?g_st=com.google.maps.preview.copy"} target='_blank' className='text-white text-decoration-none d-block mb-2'>
+                                <i className="fas fa-map-marker-alt me-2"></i>
+                                Yas Island- Yas American Academy - Abu Dhabi
+                            </Link>
+                            <Link to={"https://maps.app.goo.gl/rMYxt5aTijcHapPN8"} target='_blank' className='text-white text-decoration-none d-block mb-2'>
+                                <i className="fas fa-map-marker-alt me-2"></i>
+                                Khalifa City A -Canadian International School - abu dhabi
+                            </Link>
+                            <p><i className="fas fa-phone me-2"></i>+(+971) 58 597 1721</p>
+                            <p><i className="fas fa-envelope me-2"></i>info@easyswimuae.com</p>
                         </div>
                     </div>
 
                     {/* Footer Bottom */}
                     <div className="row mt-4">
                         <div className="col text-center">
-                            <p className="text-light mb-0">
+                            <p className="text-light mb-0 copyright">
                                 Copyright © 2024  Powered By : <Link className='text-white text-decoration-none' rel="noopener" to={"https://iwgt.ae/"} target="_blank">IDEA WEB GLOBAL
                                     TECHNOLOGY L.L.C</Link>. All Rights Reserved.
                             </p>

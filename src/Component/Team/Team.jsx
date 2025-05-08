@@ -65,7 +65,7 @@ export default function Team() {
           <img src={TitleShape} className='TitleShape' alt="" />
           <h5 className="text-primary mb-0">Team Members</h5>
         </div>
-        <h2 className="fw-bold mb-4">Our Professional Expert</h2>
+        <h2 className="fw-bold mb-4">Meet Our Expert Trainers</h2>
         <Swiper
           modules={[Navigation, Autoplay]}
           navigation

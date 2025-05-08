@@ -82,6 +82,26 @@
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+    animation: vip 1.8s alternate infinite;
+    -webkit-animation: vip 1.8s alternate infinite;
+}
+
+@keyframes vip {
+    0% {
+        transform: translate(10px, 0px);
+        -webkit-transform: translate(10px, 0px);
+        -moz-transform: translate(10px, 0px);
+        -ms-transform: translate(10px, 0px);
+        -o-transform: translate(10px, 0px);
+}
+
+    100% {
+        transform: translate(-10px, 0px) scale(1.04);
+        -webkit-transform: translate(-10px, 0px) scale(1.04);
+        -moz-transform: translate(-10px, 0px) scale(1.04);
+        -ms-transform: translate(-10px, 0px) scale(1.04);
+        -o-transform: translate(-10px, 0px) scale(1.04);
+}
 }
 
 .Testimonial-card {
@@ -108,23 +128,24 @@
 .swiper-button-prev.custom-nav {
     left: 50px;
 }
+
 .swiper-button-next.custom-nav {
     left: 100px;
 }
 
 
-@media (max-width: 992px ) {
+@media (max-width: 992px) {
     .Testimonial-card::before {
         content: unset;
     }
-    
+
     .Testimonial-border::after {
         content: unset;
     }
 
     .Testimonial-card {
-        padding: 0; 
-         margin: 0; 
+        padding: 0;
+        margin: 0;
     }
 
 }
