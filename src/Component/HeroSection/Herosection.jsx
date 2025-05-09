@@ -14,7 +14,7 @@ export default function Herosection() {
                 <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">
                         {/* Slide 1 */}
-                        <div className="carousel-item active" data-bs-interval="10000">
+                        <div className="carousel-item active" data-bs-interval="6000">
                             <img src={img1} className="Intro-image zoom" alt="slide 1" />
                             <div className="Intro-image-layer">
                                 <div className="Intro-image-layer-pragraph">
@@ -25,7 +25,7 @@ export default function Herosection() {
                                     <p>From beginners to pros — we nurture every swimmer’s journey</p>
                                 </div>
                                 <div className="button-group">
-                                    <Link to="" className="button">
+                                    <Link to="/programes" className="button">
                                         <span className="button__icon-wrapper">
                                             <svg viewBox="0 0 14 15" fill="none" width="10" xmlns="http://www.w3.org/2000/svg" className="button__icon-svg">
                                                 <path d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z" fill="currentColor" />
@@ -41,7 +41,7 @@ export default function Herosection() {
                         </div>
 
                         {/* Slide 2 */}
-                        <div className="carousel-item" data-bs-interval="10000">
+                        <div className="carousel-item" data-bs-interval="6000">
                             <img src={img2} className="Intro-image zoom" alt="slide 2" />
                             <div className="Intro-image-layer">
                                 <div className="Intro-image-layer-pragraph">
@@ -52,7 +52,7 @@ export default function Herosection() {
                                     <p>Baby Swim | Learn to Swim | Advanced | Adult Fitness | Competitive</p>
                                 </div>
                                 <div className="button-group">
-                                    <Link to="" className="button">
+                                    <Link to="/programes" className="button">
                                         <span className="button__icon-wrapper">
                                             <svg viewBox="0 0 14 15" fill="none" width="10" xmlns="http://www.w3.org/2000/svg" className="button__icon-svg">
                                                 <path d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z" fill="currentColor" />
@@ -68,7 +68,7 @@ export default function Herosection() {
                         </div>
 
                         {/* Slide 3 */}
-                        <div className="carousel-item" data-bs-interval="10000">
+                        <div className="carousel-item" data-bs-interval="6000">
                             <img src={img3} className="Intro-image zoom" alt="slide 3" />
                             <div className="Intro-image-layer">
                                 <div className="Intro-image-layer-pragraph">
@@ -79,7 +79,7 @@ export default function Herosection() {
                                     <p>Heated indoor pools, certified coaches, and safe learning environment.</p>
                                 </div>
                                 <div className="button-group">
-                                    <Link to="" className="button">
+                                    <Link to="/BokingForm" className="button">
                                         <span className="button__icon-wrapper">
                                             <svg viewBox="0 0 14 15" fill="none" width="10" xmlns="http://www.w3.org/2000/svg" className="button__icon-svg">
                                                 <path d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z" fill="currentColor" />

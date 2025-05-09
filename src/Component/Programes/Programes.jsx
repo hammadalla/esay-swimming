@@ -77,37 +77,39 @@ export default function Programes() {
                     >
                         {classData.map((cls, index) => (
                             <SwiperSlide key={index}>
-                                <div className="card border-0 shadow-sm rounded-4 p-3 mb-5">
-                                    <div className="position-relative">
-                                        <img src={cls.image} className="card-img-top rounded-4" alt="class" />
-                                        <div
-                                            className="position-absolute top-100 start-50 translate-middle bg-white px-3 py-1 rounded-pill"
+                                <Link to={"/Programdetails"} className='text-decoration-none'>
+                                    <div className="card border-0 shadow-sm rounded-4 p-3 mb-5">
+                                        <div className="position-relative">
+                                            <img src={cls.image} className="card-img-top rounded-4" alt="class" />
+                                            <div
+                                                className="position-absolute top-100 start-50 translate-middle bg-white px-3 py-1 rounded-pill"
 
-                                        >
-                                            <span className="text-primary fw-bold">{cls.price}</span> / Person
+                                            >
+                                                <span className="text-primary fw-bold">{cls.price}</span> / Person
+                                            </div>
+                                        </div>
+                                        <div className="card-body text-start mt-4">
+                                            <Link to={"/"} className="swiper-Link fw-bold">{cls.title}</Link>
+                                            <p className="text-muted small mt-2">{cls.desc}</p>
+                                            <hr />
+                                            <div className="d-flex justify-content-between text-muted small">
+                                                <span><i className="fa-solid fa-book me-1 text-primary"></i>Lesson 8</span>
+                                                <span><i className="fa-solid fa-user-group me-1 text-primary"></i>Enrolled 60+</span>
+                                                <span><i className="fa-solid fa-children me-1 text-primary"></i>Children</span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="card-body text-start mt-4">
-                                        <Link to={"/"} className="swiper-Link fw-bold">{cls.title}</Link>
-                                        <p className="text-muted small mt-2">{cls.desc}</p>
-                                        <hr />
-                                        <div className="d-flex justify-content-between text-muted small">
-                                            <span><i className="fa-solid fa-book me-1 text-primary"></i>Lesson 8</span>
-                                            <span><i className="fa-solid fa-user-group me-1 text-primary"></i>Enrolled 60+</span>
-                                            <span><i className="fa-solid fa-children me-1 text-primary"></i>Children</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                </Link>
 
 
                             </SwiperSlide>
                         ))}
 
                     </Swiper>
-                        <div className="service-banner">
-                            <span className="service-text">High Quality Pool For You</span>
-                            <Link to={"/"} className="service-button">GET ALL Programs</Link>
-                        </div>
+                    <div className="service-banner">
+                        <span className="service-text">High Quality Pool For You</span>
+                        <Link to={"/programes"} className="service-button">GET ALL Programs</Link>
+                    </div>
                 </div>
             </section>
 

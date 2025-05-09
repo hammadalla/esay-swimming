@@ -30,11 +30,12 @@ export default function Footer() {
                         {/* Quick Link */}
                         <div className="col-md-2 col-lg-3 col-xl-2 mx-auto mt-3">
                             <h5 className="text-uppercase fw-bold mb-4">Quick Link</h5>
-                            <Link to={""} className="text-white text-decoration-none d-block mb-1">→ Home</Link>
-                            <Link to={""} className="text-white text-decoration-none d-block mb-1">→ About Us</Link>
-                            <Link to={""} className="text-white text-decoration-none d-block mb-1">→ Our Staff</Link>
-                            <Link to={""} className="text-white text-decoration-none d-block mb-1">→ Contact Us</Link>
-                            <Link to={""} className="text-white text-decoration-none d-block mb-1">→ Gallery</Link>
+                            <Link to="/" className="text-white text-decoration-none d-block mb-1">→ Home</Link>
+                            <Link to="/about" className="text-white text-decoration-none d-block mb-1">→ About Us</Link>
+                            <Link to="/programes" className="text-white text-decoration-none d-block mb-1">→ Programs</Link>
+                            <Link to="/ourstaff" className="text-white text-decoration-none d-block mb-1">→ Our Staff</Link>
+                            <Link to="/gallery" className="text-white text-decoration-none d-block mb-1">→ Gallery</Link>
+                            <Link to="/contact" className="text-white text-decoration-none d-block mb-1">→ Contact Us</Link>
                         </div>
 
 
@@ -56,10 +57,15 @@ export default function Footer() {
 
                     {/* Footer Bottom */}
                     <div className="row mt-4">
-                        <div className="col text-center">
+                        <div className="col-lg-6 text-center">
                             <p className="text-light mb-0 copyright">
-                                Copyright © 2024  Powered By : <Link className='text-white text-decoration-none' rel="noopener" to={"https://iwgt.ae/"} target="_blank">IDEA WEB GLOBAL
-                                    TECHNOLOGY L.L.C</Link>. All Rights Reserved.
+                                Copyright © 2025 All rights reserved |  Easy Swimming
+                            </p>
+                        </div>
+                        <div className="col-lg-6 text-center">
+                            <p className="text-light mb-0 copyright">
+                                Powered By : <Link className='text-white text-decoration-none' rel="noopener" to={"https://iwgt.ae/"} target="_blank">IDEA WEB GLOBAL
+                                    TECHNOLOGY L.L.C</Link>
                             </p>
                         </div>
                     </div>

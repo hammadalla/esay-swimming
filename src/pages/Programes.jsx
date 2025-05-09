@@ -60,29 +60,31 @@ export default function Programes() {
         <div className="row g-4">
           {classData.map((cls, index) => (
             <div className="col-md-4" key={index}>
-              <div className="card border-0 shadow-sm rounded-4 h-100">
-                <div className="position-relative">
-                  <img
-                    src={cls.image}
-                    className="card-img-top rounded-4"
-                    alt="class"
-                    style={{ height: '250px', objectFit: 'cover' }}
-                  />
-                  <div className="position-absolute top-100 start-50 translate-middle bg-white px-3 py-1 rounded-pill shadow-sm">
-                    <span className="text-primary fw-bold">{cls.price}</span> / Person
+              <Link to="/Programdetails" className='text-decoration-none'>
+                <div className="card border-0 shadow-sm rounded-4 h-100">
+                  <div className="position-relative">
+                    <img
+                      src={cls.image}
+                      className="card-img-top rounded-4"
+                      alt="class"
+                      style={{ height: '250px', objectFit: 'cover' }}
+                    />
+                    <div className="position-absolute top-100 start-50 translate-middle bg-white px-3 py-1 rounded-pill shadow-sm">
+                      <span className="text-primary fw-bold">{cls.price}</span> / Person
+                    </div>
+                  </div>
+                  <div className="card-body mt-5">
+                    <Link to="/Programdetails" className="text-decoration-none fw-bold text-dark">{cls.title}</Link>
+                    <p className="text-muted small mt-2">{cls.desc}</p>
+                    <hr />
+                    <div className="d-flex justify-content-between text-muted small">
+                      <span><i className="fa-solid fa-book me-1 text-primary"></i>Lesson 8</span>
+                      <span><i className="fa-solid fa-user-group me-1 text-primary"></i>Enrolled 60+</span>
+                      <span><i className="fa-solid fa-children me-1 text-primary"></i>Children</span>
+                    </div>
                   </div>
                 </div>
-                <div className="card-body mt-5">
-                  <Link to="/Programdetails" className="text-decoration-none fw-bold text-dark">{cls.title}</Link>
-                  <p className="text-muted small mt-2">{cls.desc}</p>
-                  <hr />
-                  <div className="d-flex justify-content-between text-muted small">
-                    <span><i className="fa-solid fa-book me-1 text-primary"></i>Lesson 8</span>
-                    <span><i className="fa-solid fa-user-group me-1 text-primary"></i>Enrolled 60+</span>
-                    <span><i className="fa-solid fa-children me-1 text-primary"></i>Children</span>
-                  </div>
-                </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>

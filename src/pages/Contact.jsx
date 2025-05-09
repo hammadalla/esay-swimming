@@ -77,7 +77,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="map_sec">
+      {/* <section className="map_sec">
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-12">
@@ -92,7 +92,47 @@ export default function Contact() {
             </div>
           </div>
         </div>
+      </section> */}
+
+
+      <section className="map_sec py-5">
+        <div className="container-fluid">
+          <div className="row g-4">
+
+            {/* الخريطة الأولى */}
+            <div className="col-md-6">
+              <fieldset className="shadow-sm p-3 rounded">
+                <legend className="w-auto px-2 fw-bold text-primary"> <i className='fa fa-location-dot'> </i> Khalifa City A  - abu dhabi</legend>
+                <iframe
+                  title="Google Map - Main Branch"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3632.8942659700997!2d54.601011400000004!3d24.419740599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e4618575dfb1d%3A0xd6259ac9a7060fd8!2sEasy%20Swim%20Academy!5e0!3m2!1sar!2seg!4v1746467587998!5m2!1sar!2seg"
+                  allowFullScreen=""
+                  loading="lazy"
+                  className="border-0"
+                  style={{ height: "400px", width: "100%" }}
+                ></iframe>
+              </fieldset>
+            </div>
+
+
+            <div className="col-md-6">
+              <fieldset className="shadow-sm p-3 rounded">
+                <legend className="w-auto px-2 fw-bold text-primary"> <i className='fa fa-location-dot'> </i>  Yas Island - Abu Dhabi</legend>
+                <iframe
+                  title="Google Map - Main Branch"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.3844798270648!2d54.3427164!3d24.4721318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e65e1ceea3327%3A0xb05c5a921ab0e194!2sEasy%20Swim%20UAE%20-%20Cornish!5e0!3m2!1sar!2seg!4v1746803457924!5m2!1sar!2seg"
+                  allowFullScreen=""
+                  loading="lazy"
+                  className="border-0"
+                  style={{ height: "400px", width: "100%" }}
+                ></iframe>
+              </fieldset>
+            </div>
+
+          </div>
+        </div>
       </section>
+
 
 
 

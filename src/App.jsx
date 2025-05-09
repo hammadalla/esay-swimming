@@ -1,6 +1,11 @@
-
 import React from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import {
+  createBrowserRouter,
+  RouterProvider,
+  createRoutesFromElements,
+  Route,
+} from 'react-router-dom'
+
 import MainLayout from '../src/MainLayout'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -9,25 +14,30 @@ import Programes from './pages/Programes'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
 import Programdetails from './pages/Programdetails'
+import BookingForm from './pages/BokinForm'
+import NotFoundPage from './pages/NotFoundPage'
+import Store from './pages/Store'
 
 export default function App() {
-
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="" element={<MainLayout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="ourstaff" element={<OurStaff />} />
+        <Route path="programes" element={<Programes />} />
+        <Route path="Programdetails" element={<Programdetails />} />
+        <Route path="gallery" element={<Gallery />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="BokingForm" element={<BookingForm />} />
+        <Route path="store" element={<Store />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    ),
     {
-      path: "", element: <MainLayout />, children: [
-        { path: "", element: <Home /> },
-        { path: "about", element: <About /> },
-        { path: "ourstaff", element: <OurStaff /> },
-        { path: "programes", element: <Programes /> },
-        { path: "Programdetails", element: <Programdetails /> },
-        { path: "gallery", element: <Gallery /> },
-        { path: "contact", element: <Contact /> },
-      ]
+      basename: '/react', // 👈 هنا بنحدد المسار الفرعي للمشروع
     }
-  ])
-
-  return (
-    <RouterProvider router={router}>
-    </RouterProvider>
   )
-}
+
+  return <RouterProvider router={router} />
+} 

@@ -7,6 +7,14 @@ export default function Navbar() {
     const [scrolled, setscrolled] = useState(false)
     const [logoSize, setLogoSize] = useState('normal')
 
+
+    const closeMenu = () => {
+        const menu = document.getElementById('navbarSupportedContent');
+        if (menu && menu.classList.contains('show')) {
+            menu.classList.remove('show');
+        }
+    };
+
     useEffect(() => {
         const handleScroll = () => {
             const offset = window.scrollY
@@ -26,10 +34,10 @@ export default function Navbar() {
             <nav className={`navbar navbar-expand-lg shadow-sm p-0 fixed-top ${scrolled ? 'navbarStyle' : ''}`}>
                 <div className="container">
                     <NavLink to="/" className="navbar-brand">
-                        <img 
-                            src={logo} 
-                            alt="Logo" 
-                            className={`logo ${logoSize === 'small' ? 'logo-small' : ''}`} 
+                        <img
+                            src={logo}
+                            alt="Logo"
+                            className={`logo ${logoSize === 'small' ? 'logo-small' : ''}`}
                         />
                     </NavLink>
 
@@ -48,27 +56,31 @@ export default function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="">Home</NavLink>
+                                <NavLink onClick={closeMenu} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="">Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/about">About Us</NavLink>
+                                <NavLink onClick={closeMenu} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/about">About Us</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/programes">Programs</NavLink>
+                                <NavLink onClick={closeMenu} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/programes">Programs</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/ourstaff">Our Staff</NavLink>
+                                <NavLink onClick={closeMenu} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/ourstaff">Our Staff</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/gallery">Gallery</NavLink>
+                                <NavLink onClick={closeMenu} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/gallery">Gallery</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/contact">Contact Us</NavLink>
+                                <NavLink onClick={closeMenu} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/store">Store</NavLink>
                             </li>
+                            <li className="nav-item">
+                                <NavLink onClick={closeMenu} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/contact">Contact Us</NavLink>
+                            </li>
+                            
                         </ul>
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <NavLink className={"button"} to="/contact">Contact Us</NavLink>
+                                <NavLink onClick={closeMenu} className={"button"} to="/contact">Contact Us</NavLink>
                             </li>
                         </ul>
 

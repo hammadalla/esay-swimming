@@ -22,6 +22,7 @@ export default function WhatsAppButton() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Contact us on WhatsApp"
+                title='Contact us on WhatsApp'
             >
                 <i className="fab fa-whatsapp"></i>
             </Link>
